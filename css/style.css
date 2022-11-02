@@ -1,0 +1,337 @@
+body{
+	font-family: "Lato";
+}
+.wrapper{
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+
+[class*="__container"]{
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.page {}
+.page__message {}
+.page__contact {}
+
+/* --------------------------- */
+/* Кнопка */
+.button{
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	border-radius: 4px;
+	letter-spacing: 0.5px;
+	font-weight: 700;
+	line-height: 1.25;
+	padding: 16px 40px;
+	color: #fff;
+	display: inline-block;
+	position: relative;
+}
+.button span{
+	position: relative;
+	z-index: 2;
+}
+.button::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(55.95deg, #d73c37 0%, #c9510b 100%);
+	transition: opacity 0.3s ease 0s;
+	border-radius: 4px;
+	opacity: 0;
+}
+.button:hover::before{
+	opacity: 1;
+}
+/* Кнопка-бордер */
+.button--border{
+	background: transparent;
+	position: relative;
+	border: 1px solid #ff3f3a;
+	color: #FF3F3A;
+	padding: 15px 40px;
+	transition: all 0.3s ease 0s;
+}
+.button--border:hover{
+	color: #fff;
+	border: 1px solid #ff3f3a;
+	background-color: #ff3f3a;
+}
+
+.block-title {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.block-title__sub-title {
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #1E212C;
+}
+.follow-block__sub-title {
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #1E212C;
+}
+.block-title__title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1.3;
+	color: #1E212C;
+}
+/* ----------------------------------- contact ---------------------------------- */
+
+.page__contact {
+	padding-top: 152px;
+}
+.contact__container {}
+.contact__box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: space-between;
+}
+.contact__content {
+	padding-right: 20px;
+}
+.contact-title{}
+
+.block-title:not(:last-child) {
+	margin-bottom: 40px;
+}
+.block-title__sub-title {}
+.block-title__title {}
+
+.contact__info {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.contact__info:not(:last-child) {
+	margin-bottom: 48px;
+}
+.info {}
+
+.info__block {
+	display: flex;
+	flex-direction: column;
+}
+.info__box{
+	display: flex;
+	gap: 12px;
+}
+.block-info {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.info__box::before{
+	content: "";
+	padding-right: 24px;
+}
+
+.info__box--1::before {
+	background: url("../img/icons/chat.svg") left top no-repeat;
+}
+.info__box--2::before{
+	background: url("../img/icons/iphone.svg") left top no-repeat;
+}
+.info__box--3::before{
+	background: url("../img/icons/outline.svg") left top no-repeat;
+}
+
+.block-info__text {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #787A80;
+}
+.block-info__data {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #1E212C;
+}
+
+.contact__follow-block {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.contact__social{
+	flex-wrap: wrap;
+}
+.contact__list {}
+.list-follow {
+}
+.contact__social{
+	display: flex;
+	gap: 32px;
+}
+.list-follow__item {}
+
+.contact__media {
+	align-self: flex-end;
+	flex-basis: 57%;
+}
+.contact__image {
+	max-width: 100%;
+}
+
+
+/* ----------------------------------- message ---------------------------------- */
+
+.page__message {
+	padding: 180px 0;
+}
+.message__container {}
+.message__box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: space-between;
+}
+.message__media {
+	align-self:center;
+	flex: 1 0 41.5%;
+	max-width: 435px;
+}
+.message__image{
+	max-width: 100%;
+	object-fit: cover;
+}
+.message__contant {
+	flex: 0 1 57%;
+	/* flex-basis: 705px; */
+	/* flex-basis: 57%; */
+}
+
+.message-title:not(:last-child) {
+	margin-bottom: 40px;
+}
+.block-title {}
+.block-title__sub-title {}
+.block-title__title {}
+
+.message__form {
+	display: flex;
+   flex-wrap: wrap;
+   row-gap: 24px;
+   column-gap: 25px;
+	justify-content: space-between;
+}
+.message__form:not(:last-child) {
+	margin-bottom: 48px;
+}
+
+.form__box {
+	display: flex;
+	flex-grow: 1;
+	min-width: 210px;
+	flex-basis: 40%;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.form__label--check{
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+   align-items: start;
+   cursor: pointer;
+	flex-basis: 45%;
+	flex-grow: 1;
+}
+.form__input--check {
+	flex-basis: 1%;
+}
+.form__box-check{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 24px;
+	justify-content: space-between;
+}
+.form__button {
+	flex-shrink: 1;
+	flex-grow: 1;
+	flex-basis: 45%;
+	padding: 16px 15px;
+}
+
+/* -------------------------------- check ------------------------- */
+.form__input--check {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.form__label--check span {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	flex: 0 0 16px;
+	width: 16px;
+	height: 16px;
+	background-color: #FF3F3A;
+	border: 1px solid #FF3F3A;
+	border-radius: 3px;
+}
+.form__check-text::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("../img/check.svg") center / 10px 8px no-repeat;
+	transition: all 0.3s ease 0s;
+	transform: scale(2);
+	opacity: 0;
+}
+.form__input--check:checked + .form__check-text::before {
+	transform: scale(1);
+	opacity: 1;
+}
+/* ------------------------------------------------------------- */
+
+.form__input {
+	padding: 13px 16px;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+}
+.form__input::placeholder {
+	color: #9A9CA5;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.form__input--textarea{
+	min-height: 128px;
+	max-width: 705px;
+	min-width: 210px;
+}
+
+.form__label {
+	font-weight: 400;
+	line-height: 1.6;
+	cursor: pointer;
+}
+.form__check-text {}
+
+.form__button {}
+.button {}
